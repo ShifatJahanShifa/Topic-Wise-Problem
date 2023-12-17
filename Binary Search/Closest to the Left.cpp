@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n, k, val;
+    cin >> n >> k;
+    vector<int> v(n);
+    for (auto &it : v)
+        cin >> it;
+    bool ok;
+    for (int i = 0; i < k; i++)
+    {
+        cin >> val;
+        ok=false;
+        // binary search implementation
+        int left=-1,right=n,mid=0;
+        while (left+1<right)
+        {
+            mid=left+(right-left)/2;
+            if(v[mid]>val) 
+            {
+                right=mid;
+            }
+            else 
+            {
+                left=mid;
+            }
+        }
+        if(left==-1) puts("0");
+        else cout<<left+1<<"\n";
+    }
+}
