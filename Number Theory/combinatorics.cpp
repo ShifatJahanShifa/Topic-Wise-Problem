@@ -4,7 +4,7 @@ typedef long long ll;
 const ll mod=1000000007;
 vector<ll>fact(1000005,1LL);
 
-ll BE(ll a,ll b)
+ll BE(ll a,ll b) 
 {
     ll ans=1LL;
     while(b)
